@@ -1,14 +1,18 @@
 {
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build --base /tfjs-quick-intro-pres/",
     "dev": "slidev --open",
-    "export": "slidev export"
+    "export": "slidev export",
+    "deploy": "yarn build && gh-pages -d dist"
   },
   "dependencies": {
     "@slidev/cli": "^0.30.3",
     "@slidev/theme-default": "*",
     "@slidev/theme-seriph": "*"
   },
-  "name": "tfjs-presentation"
+  "name": "tfjs-presentation",
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  }
 }
